@@ -1,14 +1,16 @@
 const express=require('express');
+const bodyParser=require('body-parser');
 const { PORT }=require('./config/serverconfig');
-const router=require('./routes/index');
-const  customrouter=require('./routes/customrouter');
-
+const  apirouter  =require('./routes/index.js');
 
 const app=express();
 
+app.use(bodyParser.json());
+app.use(bodyParser.text());
+app.use(bodyParser.urlencoded());
 
-app.use('/',router);
-app.use('/custom',customrouter);
+
+app.use('/api',apirouter);
 
 app.listen(PORT,()=>{
 

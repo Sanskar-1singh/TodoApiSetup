@@ -1,7 +1,5 @@
-function homepingcontroller(req,res){
-    return res.json({msg:"ok"});
+function homepingcontroller(req, res) {
+    return res.json({ msg: "DONE" });
 }
 
-module.exports={
-    homepingcontroller
-}
+module.exports = homepingcontroller;
