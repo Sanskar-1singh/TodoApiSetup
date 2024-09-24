@@ -5,6 +5,20 @@ function createvalidate(req,res,next){
     next();
 }
 
+function updating(req,res,next){
+
+    if(typeof req.body.index !="number"){
+        return res.json({
+            data:"your index is not valid"
+        })
+    }
+    
+    else
+    next();
+}
+
+
 module.exports={
-    createvalidate
+    createvalidate,
+    updating
 }
