@@ -19,9 +19,21 @@ function createTodo(req,res){
     });
 }
 
+function updateTodo(req,res){
+    const obj={};
+    obj.index=req.index;
+    obj.message=req.message;
+console.log(obj);
+       todoservice.update(obj.index,obj.messagemessage); 
+    //todoservice.update(index,message);
+     return res.json({
+        data:"your data has been updated"
+     })
+}
 
 
 module.exports={
     getTodo,
-    createTodo
+    createTodo,
+    updateTodo
 }

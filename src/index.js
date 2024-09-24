@@ -1,6 +1,6 @@
 const express=require('express');
 const bodyParser=require('body-parser');
-const { PORT }=require('./config/serverconfig');
+const { PORT }=require('./config/serverconfig.js');
 const  apirouter  =require('./routes/index.js');
 
 const app=express();
@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded());
 
 
 app.use('/api',apirouter);
-
+ 
 app.listen(PORT,()=>{
 
     console.log(`server stared at port ${PORT}`);

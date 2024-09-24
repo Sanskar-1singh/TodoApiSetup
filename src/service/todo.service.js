@@ -12,7 +12,12 @@ class Todoservice{
     getOneTodo(id){
         return this.TodoRepository.get(id);
     }
+    
+       update(index,message){
+           
+         this.TodoRepository.updateval(index,message);
 
+       }
     getAll(){
         return this.TodoRepository.getAll();
     }
