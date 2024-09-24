@@ -13,7 +13,7 @@ class TodoRepository{
     updateval(index,message){
         const obj={};
            obj.text=message;
-           todo[index]=obj.text;
+           todo[index].text=obj.text;
            return;
        }
 

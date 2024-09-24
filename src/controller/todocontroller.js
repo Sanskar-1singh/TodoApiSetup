@@ -21,10 +21,10 @@ function createTodo(req,res){
 
 function updateTodo(req,res){
     const obj={};
-    obj.index=req.index;
-    obj.message=req.message;
+    obj.index=req.body.index;
+    obj.message=req.body.message;
 console.log(obj);
-       todoservice.update(obj.index,obj.messagemessage); 
+       todoservice.update(obj.index,obj.message); 
     //todoservice.update(index,message);
      return res.json({
         data:"your data has been updated"
