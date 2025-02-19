@@ -2,7 +2,7 @@
 const Todoservice=require('../service/todo.service');
 const TodoRepository=require('../repositories/todo.repo');
 
-const todoservice=new Todoservice( new TodoRepository());
+const todoservice=new Todoservice( new TodoRepository());//there are two ways to segergate this one in thisproject one in flight booking service>>
 
 function getTodo(req,res){
     const response=todoservice.getAll();
